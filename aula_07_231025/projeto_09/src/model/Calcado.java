@@ -1,6 +1,6 @@
 package model;
 
-public class Calcado extends Vestuario{
+public class Calcado extends Vestuario implements ISeguranca{
     private String materialSola;
     private String materialParteSuperior;
     private String materialInterno;
@@ -12,6 +12,7 @@ public class Calcado extends Vestuario{
         this.setMaterialParteSuperior(mps);
         this.setMaterialInterno(mi);
         this.imprimirTipoProduto();
+        this.imprimirMensageSeguranca();
     }
 
     public String getMaterialSola() {
@@ -65,5 +66,10 @@ public class Calcado extends Vestuario{
     @Override
     public void imprimirTipoProduto() {
         System.out.println("Calçado");
+    }
+
+    @Override
+    public void imprimirMensageSeguranca() {
+        System.out.println("Verificar a numeração para não fazer gato");
     }
 }
